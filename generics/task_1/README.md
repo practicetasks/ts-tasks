@@ -3,7 +3,7 @@
 1. Создайте класс `Order`, который будет содержать:
     - `product: Product`
     - `quantity: number`
-2. Создайте дженерик-класс `OrderStorage` на основе `BaseStorage`.
+2. Создайте класс `OrderStorage` на основе `BaseStorage`.
 3. Реализуйте метод `getTotalValue()`, который будет возвращать суммарную стоимость всех заказов.
 
 ```ts
@@ -50,7 +50,7 @@ const product2 = new Product("Laptop", 1000);
 const order1 = new Order(product1, 2);
 const order2 = new Order(product2, 1);
 
-const orderStorage = new OrderStorage<Order>();
+const orderStorage = new OrderStorage();
 orderStorage.addItem(order1);
 orderStorage.addItem(order2);
 
