@@ -5,7 +5,7 @@
         - `phoneNumber: string` — номер телефона
     - Конструктор принимает номер
     - Метод:
-        - `makeCall(phoneNum: string): void` — абстрактный метод для звонка на другой номер
+        - `makeCall(phoneNum: string): void` — метод для звонка на другой номер
 
 2. Создайте подкласс `Smartphone`
     - Переопределяет метод `makeCall`:
