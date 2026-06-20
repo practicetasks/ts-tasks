@@ -34,8 +34,10 @@ class BaseStorage<T> {
 }
 
 class ProductStorage extends BaseStorage<Product> {
-    getMostExpensive(): Product {
-        return this.items.reduce((acc, product) => (acc.price > product.price) ? acc : product, this.items[0]);
+    getMostExpensive(): Product | undefined {
+        return this.items.reduce((acc, product) => (
+            acc ? ((acc.price > product.price) ? acc : product) : product
+        ), this.items[0]);
     }
 }
 ```
